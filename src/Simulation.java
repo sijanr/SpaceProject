@@ -29,6 +29,27 @@ public class Simulation {
     }
 
 
+    /**@description Loads the items and their respective weights from phase1 file
+     * @return An array list of Items loaded from the file or null, if the files is not found*/
+
+    public ArrayList<Item> loadItemsPhase1(){
+        ArrayList<Item> items = new ArrayList<>();
+        File file = new File("phase-1.txt");
+        String[] tempString;
+        try{
+            Scanner scanner = new Scanner(file);
+            while(scanner.hasNextLine()){
+                tempString = scanner.nextLine().split("=");
+                items.add(new Item(tempString[0],(Integer.parseInt(tempString[1]))/1000));
+            }
+            return items;
+        } catch(FileNotFoundException e){
+            System.out.println("Phase-1 file not found");
+            return null;
+        }
+    }
+
+
     /**@description Loads the items into the U1 rocket(s)
      * @param items Array list of items to be sent to the space
      * @return Array list of rockets required to fill in all the items or null if the item list is empty*/
@@ -79,7 +100,7 @@ public class Simulation {
     /**@description Runs the simulation to get an estimate of the total cost to send the rockets
      * @param providedRockets Array list of rockets carrying the items to be sent to the space
      * @return The estimated budget to send all the rockets*/
-    public long runSimulationU1(ArrayList<Rocket> providedRockets){
+    public long runSimulation(ArrayList<Rocket> providedRockets){
 
         long totalBudget = 0;
 

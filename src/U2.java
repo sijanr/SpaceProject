@@ -12,7 +12,7 @@ public class U2 extends Rocket {
 //  checks if there was any problem with the launch of the rocket
     @Override
     public boolean launch(){
-        if(super.randomNumberGenerate()>=chanceExplode){
+        if(super.randomNumberGenerate()>(chanceExplode*10)+0.2){
             return false;
         }
         return true;
@@ -22,7 +22,7 @@ public class U2 extends Rocket {
 //  checks if the land of the rocket was successful
     @Override
     public boolean land(){
-        if(super.randomNumberGenerate()>=chanceCrash){
+        if(super.randomNumberGenerate()>(chanceCrash*10)+0.2){
             return false;
         }
         return true;
