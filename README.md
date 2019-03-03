@@ -7,7 +7,7 @@ Load up the project in one of the java compatible IDEs, and compile and run the 
 
 **Prerequisites**
   - Java SE Development Kit
-  - IDEs that that runs and compiles Java projects (Eclipse, IntelliJ,..)
+  - IDE that that runs and compiles Java projects (Eclipse, IntelliJ,..)
   
 ## Authors
   * Sijan Rijal - [sijanr](https://github.com/sijanr)
