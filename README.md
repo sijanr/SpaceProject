@@ -11,6 +11,9 @@ Load up the project in one of the java compatible IDEs, and compile and run the 
   
 ## Authors
   * Sijan Rijal - [sijanr](https://github.com/sijanr)
+  
+## License
+This repository is licensed under the [MIT license](./License.md)
 
 ## Acknowledgements
   - Udacity, as it is the final project in one of Udacity's Object Oriented Programming course, in which I was enrolled in.
